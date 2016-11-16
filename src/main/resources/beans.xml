@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans>
+	<bean id="beanA" name="test" class="org.lqk.lspring.bean.BeanA"
+		init-method="init" destroy-method="close">
+		<property name="beanB" ref="beanB" />
+		<property name="title" value="studentA" />
+	</bean>
+	<bean id="beanB" class="org.lqk.lspring.bean.BeanB">
+		<property name="title" value="studentB" />
+	</bean>
+
+	<bean id="beanBF" class="org.lqk.lspring.bean.BeanBFactoryBean"></bean>
+	
+	<bean id="beanC" class="org.lqk.lspring.bean.BeanC"></bean>
+	
+	<aspect ref="beanC">
+		<before method="before" pointcut="org.lqk.lspring.bean.BeanB.run()"></before>
+	</aspect>
+</beans>

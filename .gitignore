@@ -1,0 +1,18 @@
+## compile and build files
+*.class
+*.jar
+lib/
+target/
+/mobile/
+
+## editor backfiles
+*~
+
+## IDE project files
+.externalToolBuilders/
+.settings/
+.classpath
+.project
+*/.project
+.idea
+*.iml
